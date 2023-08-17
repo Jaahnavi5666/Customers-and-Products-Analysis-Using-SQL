@@ -44,4 +44,29 @@ So I used two parameters that considers the above three paramaters into consider
 * $lowStock = \frac{SUM(quantityOrdered)}{quantityInStock}$
 * $productPerformance = SUM(quantityOrdered \cdot priceEach)$
 
-To apply the above formula and thereby obtaining the required priority 
+To apply the above formula and thereby obtain the required priority Product, the following code is written:
+```
+WITH lowStockProducts AS(
+	SELECT p.productCode, 
+       CAST(od.quantityOrdered * 1.0 / p.quantityInStock AS DECIMAL(10, 2)) AS lowStock
+	FROM products AS p
+	JOIN (
+		SELECT productCode, SUM(quantityOrdered) AS quantityOrdered
+		FROM orderdetails
+		GROUP BY productCode
+	) AS od ON p.productCode = od.productCode
+	GROUP BY p.productCode
+	ORDER BY lowStock DESC
+),
+TopProducts AS(
+	SELECT od.productCode,
+			(quantityOrdered * priceEach) AS productPerformance
+	FROM orderdetails od
+	GROUP BY od.productCode
+)
+SELECT lsp.productCode, lsp.lowStock, tp.productPerformance
+FROM LowStockProducts lsp
+JOIN TopProducts tp ON lsp.productCode = tp.productCode
+WHERE lsp.productCode IN (SELECT productCode FROM LowStockProducts)
+ORDER BY lsp.lowStock DESC;
+```
