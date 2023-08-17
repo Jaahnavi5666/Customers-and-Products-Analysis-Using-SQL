@@ -14,3 +14,6 @@ I used scale model cars data base and it contains 8 tables in total:
 * Payments: customers' payment details are recorded
 * Products: a list of scale model cars, this is the complete list of product along with availabe quantity, prodcut description, price, etc.
 * ProductLines: a list of product line categories along with their description.
+
+Using the below code, a table is generated such that each table name is taken as a sting, and its number of columns and rows are counted.
+
