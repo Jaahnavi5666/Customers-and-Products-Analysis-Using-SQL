@@ -38,3 +38,4 @@ Thereby, I got a basic idea of the data:
 
 
 ![Alt text](table_columns_rows.png)
+## Question 1: Which Products Should We Order More of or Less of?
