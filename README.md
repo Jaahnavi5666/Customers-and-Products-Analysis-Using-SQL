@@ -35,4 +35,6 @@ UNION ALL
 SELECT 'products' AS TableName, (SELECT COUNT(*) FROM pragma_table_info('products')) AS NumColumns, COUNT(*) AS NumRows FROM products;
 ```
 Thereby, I got a basic idea of the data:
+
+
 ![Alt text](table_columns_rows.png)
