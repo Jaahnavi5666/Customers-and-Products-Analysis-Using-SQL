@@ -42,6 +42,6 @@ Thereby, I got a basic idea of the data:
 The decision is to be made based on a product's demand, the revenue it generates, and the quantity available with us.
 So I used two parameters that considers the above three paramaters into consideration:
 * $lowStock = \frac{quantityOrdered}{quantityInStock}$
-* $ productPerformance = quantityOrdered x priceEach$
+* $productPerformance = quantityOrdered x priceEach$
 
 
