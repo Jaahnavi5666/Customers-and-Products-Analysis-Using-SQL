@@ -43,4 +43,5 @@ The decision is to be made based on a product's demand, the revenue it generates
 So I used two parameters that considers the above three paramaters into consideration:
 * $lowStock = \frac{SUM(quantityOrdered)}{quantityInStock}$
 * $productPerformance = SUM(quantityOrdered \cdot priceEach)$
+
 To apply the above formula and thereby obtaining the required priority 
