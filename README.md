@@ -34,3 +34,4 @@ SELECT 'productlines' AS TableName, (SELECT COUNT(*) FROM pragma_table_info('pro
 UNION ALL
 SELECT 'products' AS TableName, (SELECT COUNT(*) FROM pragma_table_info('products')) AS NumColumns, COUNT(*) AS NumRows FROM products;
 ```
+Thereby, I got a basic idea of the data:
