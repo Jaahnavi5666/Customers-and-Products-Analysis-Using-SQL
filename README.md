@@ -151,4 +151,4 @@ JOIN
 ```
 ### LTV
 
-![Alt text](Top_5_leastEngaged.png)
+![Alt text](LTV.png)
