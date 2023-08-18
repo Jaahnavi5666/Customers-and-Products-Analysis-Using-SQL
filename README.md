@@ -149,3 +149,6 @@ FROM
 JOIN 
     customer_profit_by_month cpbm ON ncbmt.year_month = cpbm.year_month;
 ```
+### LTV
+
+![Alt text](Top_5_leastEngaged.png)
