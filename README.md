@@ -89,6 +89,7 @@ SELECT o.customerNumber, SUM(quantityOrdered * (priceEach - buyPrice)) AS profit
 ```
 On accordingly creating a CET from above query I obtained the top five VIP custmers and the top five least engaged customers:
 
-
+### Top five VIP customers
 ![Alt text](Top_5_VIP.png)
+### Top five Least Engaged Customers
 ![Alt text](Top_5_leastEngaged.png)
