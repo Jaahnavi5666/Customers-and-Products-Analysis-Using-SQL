@@ -78,11 +78,12 @@ So thereby the profit made by a customer can be calculated as follows:
 * $profit = SUM(quantityOrdered * (priceEach - buyPrice))$
 Code:
 ```
-SELECT o.customerNumber, SUM(k.profit)
+SELECT o.customerNumber, SUM(k.profit)AS Profit
 FROM orders o
 JOIN (SELECT SUM(od.quantityOrdered * (od.priceEach - p.buyPrice)) AS profit, od.orderNumber
 	FROM orderdetails od
 	JOIN products p ON od.productCode = p.productCode
 	GROUP BY od.orderNumber) k ON o.orderNumber = k.orderNumber
-GROUP BY o.customerNumber;
+GROUP BY o.customerNumber
+ORDER BY Profit DESC;
 ```
