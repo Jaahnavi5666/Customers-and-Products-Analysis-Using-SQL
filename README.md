@@ -152,3 +152,6 @@ JOIN
 ### LTV
 
 ![Alt text](LTV.png)
+
+## Summary
+The project uncovers valuable insights from a company's data through comprehensive SQL analysis. By leveraging various SQL queries and techniques, the project delved into customer behavior, product popularity, and financial performance to facilitate data-driven decision-making.
