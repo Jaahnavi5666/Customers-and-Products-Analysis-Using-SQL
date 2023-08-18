@@ -70,3 +70,9 @@ JOIN TopProducts tp ON lsp.productCode = tp.productCode
 WHERE lsp.productCode IN (SELECT productCode FROM LowStockProducts)
 ORDER BY lsp.lowStock DESC;
 ```
+## Question 2: How Should We Match Marketing and Communication Strategies to Customer Behavior?
+To answer this question I need to explore the customer information. One idea is to divide the most engaged customers - VIP who bring highr profit to the company from the less engaged customers. So as per the division we may organize some events to drive loyalty for the VIPs and launch a campaign for the less engaged.
+On exploring the data we know every customer have an unique customerNumber, and he can place various orders with different orderNumbers.
+Note: under one orderNumber there may be many unique products
+So thereby the profit made by a customer can be calculated as follows:
+* $profit = SUM(quantityOrdered * (priceEach - buyPrice))$
